@@ -15,7 +15,7 @@ export const profile = {
   garden: "https://rezanoel.ir",
   youtube: "https://www.youtube.com/@chibodeh",
   youtubeHandle: "@chibodeh",
-  youtubeName: "چی بوده",
+  youtubeName: "ChiBodeh",
 };
 
 export const nav = [
@@ -40,11 +40,11 @@ export const stack = [
 ] as const;
 
 export const languages = [
-  { name: "Persian", level: "Native" },
-  { name: "English", level: "B1" },
-  { name: "German", level: "B1" },
-  { name: "Brazilian Portuguese", level: "A2" },
-  { name: "Armenian", level: "A2" },
+  { name: "Persian", level: "Native", percent: 100 },
+  { name: "English", level: "B1", percent: 60 },
+  { name: "German", level: "B1", percent: 60 },
+  { name: "Brazilian Portuguese", level: "A2", percent: 40 },
+  { name: "Armenian", level: "A2", percent: 40 },
 ] as const;
 
 export const about = {
@@ -113,20 +113,8 @@ export const projects: Project[] = [
     downloadLabel: "Download plugin",
   },
   {
-    id: "fivem",
-    index: "04",
-    title: "FiveM Server Scripts",
-    summary:
-      "Custom Lua scripts and NUI interfaces for live servers — ox_inventory flows, vehicle garages, and gang management.",
-    tags: ["Lua", "NUI", "ox_inventory", "FiveM"],
-    showcaseHref: "https://github.com/RezaNoel",
-    showcaseLabel: "View repos",
-    downloadHref: asset("/downloads/fivem-scripts.zip"),
-    downloadLabel: "Download scripts",
-  },
-  {
     id: "garden",
-    index: "05",
+    index: "04",
     title: "Digital Garden & Workflows",
     summary:
       "Automated setups that combine n8n, Telegram bots, and Python web scrapers into one local publishing loop.",
@@ -139,9 +127,9 @@ export const projects: Project[] = [
 ];
 
 export const youtube = {
-  name: "چی بوده",
+  name: "ChiBodeh",
   handle: "@chibodeh",
   href: "https://www.youtube.com/@chibodeh",
   headline: "Self-taught language learning and real productivity.",
-  body: "On چی بوده I break down how I learn languages on my own and how I raise output without drowning in tools. No fluff systems — just the loops that stay on the desk.",
+  body: "On ChiBodeh I break down how I learn languages on my own and how I raise output without drowning in tools. No fluff systems — just the loops that stay on the desk.",
 };

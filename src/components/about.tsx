@@ -33,14 +33,26 @@ export function About() {
 
           <div className="mt-10">
             <p className="mark text-accent-ink">Languages</p>
-            <ul className="mt-4 grid gap-px border border-line bg-line sm:grid-cols-2">
+            <ul className="mt-5 space-y-5">
               {languages.map((language) => (
-                <li
-                  key={language.name}
-                  className="flex items-baseline justify-between gap-4 bg-bg px-4 py-3"
-                >
-                  <span className="text-ink-strong">{language.name}</span>
-                  <span className="mark text-faint">{language.level}</span>
+                <li key={language.name}>
+                  <div className="mb-2 flex items-baseline justify-between gap-4">
+                    <span className="text-ink-strong">{language.name}</span>
+                    <span className="mark text-faint">{language.level}</span>
+                  </div>
+                  <div
+                    className="h-2 border border-line bg-bg-sunken"
+                    role="progressbar"
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={language.percent}
+                    aria-label={`${language.name}, ${language.level}`}
+                  >
+                    <div
+                      className="h-full bg-accent"
+                      style={{ width: `${language.percent}%` }}
+                    />
+                  </div>
                 </li>
               ))}
             </ul>

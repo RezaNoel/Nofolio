@@ -15,8 +15,7 @@ export function Projects() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Nojen and Bet on Poker first, then the language plugin, FiveM scripts, and the
-            automation garden.
+            Nojen, Bet on Poker, the language plugin, and the automation garden.
           </p>
         </div>
 
