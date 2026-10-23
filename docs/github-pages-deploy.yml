@@ -1,0 +1,48 @@
+# Copy this file to .github/workflows/deploy.yml after running:
+#   gh auth refresh -h github.com -s workflow
+# The current GitHub token cannot push workflow files.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_BASE_PATH: /Nofolio
+          NEXT_PUBLIC_SITE_URL: https://rezanoel.github.io/Nofolio
+        run: npm run build
+
+      - name: Keep GitHub Pages from ignoring Next folders
+        run: touch out/.nojekyll
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out

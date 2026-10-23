@@ -1,0 +1,297 @@
+@import "tailwindcss";
+
+/*
+ * Nofolio tokens.
+ * Light = warm atelier paper. Dark = night workshop.
+ * Hairline rules, square corners, one copper accent.
+ */
+
+:root {
+  --bg: #efe8dc;
+  --bg-raised: #f7f2e9;
+  --bg-sunken: #e4dccb;
+  --ink: #1c1914;
+  --ink-strong: #0b0907;
+  --muted: rgba(28, 25, 20, 0.64);
+  --faint: rgba(28, 25, 20, 0.42);
+  --line: rgba(28, 25, 20, 0.16);
+  --line-strong: rgba(28, 25, 20, 0.4);
+  --accent: #c45c16;
+  --accent-ink: #9a3e0c;
+  --invert-bg: #1c1914;
+  --invert-fg: #efe8dc;
+  --scan: rgba(28, 25, 20, 0.035);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #12110f;
+  --bg-raised: #1b1916;
+  --bg-sunken: #0a0908;
+  --ink: #efe8dc;
+  --ink-strong: #fff8ee;
+  --muted: rgba(239, 232, 220, 0.62);
+  --faint: rgba(239, 232, 220, 0.4);
+  --line: rgba(239, 232, 220, 0.14);
+  --line-strong: rgba(239, 232, 220, 0.38);
+  --accent: #e07a2f;
+  --accent-ink: #ffb06a;
+  --invert-bg: #fff8ee;
+  --invert-fg: #12110f;
+  --scan: rgba(255, 248, 238, 0.03);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12110f;
+    --bg-raised: #1b1916;
+    --bg-sunken: #0a0908;
+    --ink: #efe8dc;
+    --ink-strong: #fff8ee;
+    --muted: rgba(239, 232, 220, 0.62);
+    --faint: rgba(239, 232, 220, 0.4);
+    --line: rgba(239, 232, 220, 0.14);
+    --line-strong: rgba(239, 232, 220, 0.38);
+    --accent: #e07a2f;
+    --accent-ink: #ffb06a;
+    --invert-bg: #fff8ee;
+    --invert-fg: #12110f;
+    --scan: rgba(255, 248, 238, 0.03);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-sunken: var(--bg-sunken);
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-invert-bg: var(--invert-bg);
+  --color-invert-fg: var(--invert-fg);
+
+  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-manrope), system-ui, sans-serif;
+  --font-mono: var(--font-ibm), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-*: initial;
+}
+
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #efe8dc;
+}
+@property --bg-raised {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f7f2e9;
+}
+@property --bg-sunken {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e4dccb;
+}
+@property --ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #1c1914;
+}
+@property --ink-strong {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0b0907;
+}
+@property --muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(28, 25, 20, 0.64);
+}
+@property --faint {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(28, 25, 20, 0.42);
+}
+@property --line {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(28, 25, 20, 0.16);
+}
+@property --line-strong {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(28, 25, 20, 0.4);
+}
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #c45c16;
+}
+@property --accent-ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #9a3e0c;
+}
+@property --invert-bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #1c1914;
+}
+@property --invert-fg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #efe8dc;
+}
+
+html.theme-anim {
+  transition:
+    --bg 0.4s ease,
+    --bg-raised 0.4s ease,
+    --bg-sunken 0.4s ease,
+    --ink 0.4s ease,
+    --ink-strong 0.4s ease,
+    --muted 0.4s ease,
+    --faint 0.4s ease,
+    --line 0.4s ease,
+    --line-strong 0.4s ease,
+    --accent 0.4s ease,
+    --accent-ink 0.4s ease,
+    --invert-bg 0.4s ease,
+    --invert-fg 0.4s ease;
+}
+
+html.theme-anim body * {
+  transition-duration: 0s !important;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+
+::selection {
+  background: var(--accent);
+  color: #fff8ee;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+}
+
+.mark {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hover-invert {
+  transition:
+    background-color 120ms linear,
+    color 120ms linear,
+    border-color 120ms linear;
+}
+
+.hover-invert:hover,
+.hover-invert[data-active="true"] {
+  background: var(--invert-bg);
+  color: var(--invert-fg);
+  border-color: transparent;
+}
+
+.cross {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+}
+
+.cross::before,
+.cross::after {
+  content: "";
+  position: absolute;
+  background: var(--line-strong);
+}
+
+.cross::before {
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.cross::after {
+  top: 5px;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.rail {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+}
+
+.tape {
+  display: flex;
+  overflow: hidden;
+}
+
+.tape-track {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  animation: tape-move 38s linear infinite;
+}
+
+@keyframes tape-move {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.grid-sheet {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

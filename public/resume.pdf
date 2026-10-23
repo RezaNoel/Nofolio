@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj<< /Type /Catalog /Pages 2 0 R >>endobj
+2 0 obj<< /Type /Pages /Kids [3 0 R] /Count 1 >>endobj
+3 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>endobj
+4 0 obj<< /Length 1516 >>stream
+BT
+/F1 11 Tf
+/F1 22 Tf
+1 0 0 1 64 730 Tm (REZA TAVANGAR) Tj
+/F1 13 Tf
+1 0 0 1 64 706 Tm (Full-Stack Software Developer) Tj
+/F1 10 Tf
+1 0 0 1 64 684 Tm (Yerevan, Armenia  |  github.com/RezaNoel  |  linkedin.com/in/rezanoel) Tj
+/F1 12 Tf
+1 0 0 1 64 650 Tm (PROFILE) Tj
+/F1 11 Tf
+1 0 0 1 64 632 Tm (Computer Network and Software background. Builds full-stack products and) Tj
+/F1 11 Tf
+1 0 0 1 64 616 Tm (automation workflows \(n8n, Docker\) plus local AI agent integrations.) Tj
+/F1 12 Tf
+1 0 0 1 64 582 Tm (STACK) Tj
+/F1 11 Tf
+1 0 0 1 64 564 Tm (Python, Django, React, TypeScript, C#, PHP, Lua, n8n, Docker, Obsidian) Tj
+/F1 12 Tf
+1 0 0 1 64 530 Tm (SELECTED WORK) Tj
+/F1 12 Tf
+1 0 0 1 64 510 Tm (Nolingo) Tj
+/F1 11 Tf
+1 0 0 1 64 494 Tm (Obsidian flashcard plugin with spaced repetition for language learning.) Tj
+/F1 12 Tf
+1 0 0 1 64 470 Tm (FiveM Server Scripts) Tj
+/F1 11 Tf
+1 0 0 1 64 454 Tm (Custom Lua + NUI: ox_inventory, vehicle garages, gang management.) Tj
+/F1 12 Tf
+1 0 0 1 64 430 Tm (Digital Garden & Workflows) Tj
+/F1 11 Tf
+1 0 0 1 64 414 Tm (n8n, Telegram bots, and Python scrapers. Garden: rezanoel.ir) Tj
+/F1 12 Tf
+1 0 0 1 64 390 Tm (Content Creation) Tj
+/F1 11 Tf
+1 0 0 1 64 374 Tm (YouTube: Chi Boodeh and RezaNoel ? productivity and gaming.) Tj
+/F1 12 Tf
+1 0 0 1 64 340 Tm (FOCUS) Tj
+/F1 11 Tf
+1 0 0 1 64 322 Tm (Automation workflows, containerized services, and local-first AI agents.) Tj
+/F1 9 Tf
+1 0 0 1 64 80 Tm (Replace this file with your designed PDF. Keep the name public/resume.pdf.) Tj
+ET
+endstream
+endobj
+5 0 obj<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000056 00000 n 
+0000000111 00000 n 
+0000000235 00000 n 
+0000001801 00000 n 
+trailer<< /Size 6 /Root 1 0 R >>
+startxref
+1869
+%%EOF
